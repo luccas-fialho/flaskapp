@@ -25,13 +25,17 @@
     </div>
     {%endif%}
     <div>
-      <a href="/page">pagina2</a>
+      <a href="/page" onclick="return confirm('voce tem certeza que quer fazer isso?')">pagina2</a>
     </div>
 
     <h2>Usuarios Cadastrados:</h2>
     <ul>
       {%for user in usuarios%}
-      <li>Nome: {{user[1]}} {{user[2]}}, Endereço: {{user[3]}}</li>
+      <div class="aaa">
+        <li>ID: {{user[0]}}, Nome: {{user[1]}} {{user[2]}}, Endereço: {{user[3]}}</li>
+        <a class="botao" href="/delete/{{user[0]}}">X</a>
+
+      </div>
       {% endfor%}
     </ul>
   </body>

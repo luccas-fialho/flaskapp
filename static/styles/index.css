@@ -1,7 +1,6 @@
 a {
   text-decoration: none;
   border: 1px solid #ccc;
-  margin-top: 50px;
   padding: 10px;
   background-color: brown;
   color: #ccc;
@@ -21,4 +20,14 @@ div {
   background-color: #a1c82b;
   padding: 2px;
   font-size: 20px;
+}
+
+.botao {
+  background-color: aqua;
+}
+
+.aaa {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }

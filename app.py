@@ -67,6 +67,15 @@ def cadastrar():
         flash("usuario adicionado com sucesso!")
         return redirect(url_for('index'))
 
+@app.route('/delete/<id>', methods=['POST', 'GET'])
+def delete(id):
+    conn_str = f"DRIVER={driver};SERVER={server};DATABASE={database};UID={database_user};PWD={password}"
+    conn = pyodbc.connect(conn_str)
+    cur = conn.cursor()
+    cur.execute(f"DELETE FROM usuario WHERE id = {id}")
+    cur.commit()
+    flash("Deletado com sucesso!")
+    return redirect(url_for('index'))
 
 if __name__ == '__main__':
     app.run(debug=True)
