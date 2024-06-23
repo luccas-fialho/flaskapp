@@ -1,0 +1,24 @@
+a {
+  text-decoration: none;
+  border: 1px solid #ccc;
+  margin-top: 50px;
+  padding: 10px;
+  background-color: brown;
+  color: #ccc;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a:hover {
+  background-color: aqua;
+}
+
+div {
+  margin-top: 20px;
+  height: 100%;
+}
+
+.message {
+  background-color: #a1c82b;
+  padding: 2px;
+  font-size: 20px;
+}

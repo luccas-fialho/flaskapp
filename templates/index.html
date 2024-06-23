@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Example</title>
+    <link rel="stylesheet" href="/static/styles/index.css" />
+  </head>
+  <body>
+    <h1>Hello!</h1>
+    <form action="/cadastrar" method="post">
+      <label for="nome">Nome</label>
+      <input type="text" name="nome" />
+      <label for="sobrenome">Sobrenome</label>
+      <input type="text" name="sobrenome" />
+      <label for="endereco">Endereço</label>
+      <input type="text" name="endereco" />
+      <label for="cpf">CPF</label>
+      <input type="text" name="cpf" pattern="\d{3}\d{3}\d{3}\d{2}" />
+      <button type="submit">Enviar</button>
+    </form>
+
+    {%if message%}
+    <div class="message">
+      <p>{{message[0]}}</p>
+    </div>
+    {%endif%}
+    <div>
+      <a href="/page">pagina2</a>
+    </div>
+
+    <h2>Usuarios Cadastrados:</h2>
+    <ul>
+      {%for user in usuarios%}
+      <li>Nome: {{user[1]}} {{user[2]}}, Endereço: {{user[3]}}</li>
+      {% endfor%}
+    </ul>
+  </body>
+</html>
